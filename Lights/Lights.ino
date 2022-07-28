@@ -1,12 +1,15 @@
 int pin1 = 10;
-int pin2 = 9;
-int pin3 = 8;
+int pin2 = 2;
+int pin3 = 3;
 int pin4 = 7;
 int pin5 = 6;
 
-int LED[19][2] = {{pin1, pin2},{pin2, pin1},{pin2, pin3},{pin3, pin2},{pin3, pin4},{pin4, pin3},
-{pin4, pin5},{pin5, pin4},{pin1, pin3},{pin3, pin1},{pin2, pin4},{pin4, pin2},{pin3, pin5},{pin5, pin3},
-{pin1, pin4},{pin4, pin1},{pin2, pin5},{pin5, pin2},{pin1 ,pin5}};
+int LED[19][2] = {{pin1, pin2},{pin2, pin1},{pin2, pin3},
+{pin3,pin2},{pin3, pin4},{pin4, pin3},{pin4, pin5},
+{pin5, pin4},{pin1, pin3},{pin3, pin1},
+{pin2, pin4},{pin4, pin2},{pin3, pin5},
+{pin5, pin3},{pin1, pin4},{pin4, pin1},
+{pin2, pin5},{pin5, pin2},{pin1 ,pin5}};
 
 
 void buttonLED(int LEDn, int LEDs){
@@ -25,4 +28,8 @@ void buttonLED(int LEDn, int LEDs){
     pinMode(LED[LEDi][1], INPUT);
   }
 
+}
+
+void loop(){
+  buttonLED(4, 1);
 }
